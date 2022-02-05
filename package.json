@@ -1,0 +1,32 @@
+{
+  "name": "what-the-bing-noun-importer-service",
+  "version": "1.0.0",
+  "description": "This service imports a list of words used in the What the Bing?! game",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "devl": "nodemon ./src/app.js -e js",
+    "startProd": "./node_modules/forever/bin/forever start src/app.js",
+    "stopProd": "./node_modules/forever/bin/forever stop src/app.js"
+  },
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnawanDev/What-the-Bing-noun-importer-service.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnawanDev/What-the-Bing-noun-importer-service/issues"
+  },
+  "homepage": "https://github.com/AnnawanDev/What-the-Bing-noun-importer-service#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "underscore": "^1.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
