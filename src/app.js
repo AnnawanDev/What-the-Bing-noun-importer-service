@@ -91,7 +91,7 @@ function getWordList() {
 
 function convertListToArray(someList) {
   let returnArray = [];
-  //function used from https://geshan.com.np/blog/2021/10/nodejs-read-file-line-by-line/
+  //function adapted from https://geshan.com.np/blog/2021/10/nodejs-read-file-line-by-line/
   //February 5, 2022
   someList.split(/\r?\n/).forEach(line =>  {
     if (`${line}` != "") {
