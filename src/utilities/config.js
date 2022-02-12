@@ -10,7 +10,8 @@
 module.exports = Object.freeze({
     ENABLE_LOGGING: true,
     RUNNING_LOCAL: true,
-    LOCAL_PORT: 5000,
+    LOCAL_PORT: 5001,
     OSU_PORT: 13789,
-    FILE_PATH_TO_WORDLIST: '/Users/edwied/development/OSU/What-the-Bing/CS361-FinalProject/NounListGenerator/wordlist.txt'
+    LOCAL_FILE_PATH_TO_WORDLIST: '/Users/edwied/development/OSU/What-the-Bing/CS361-FinalProject/NounListGenerator/wordlist.txt',
+    OSU_FILE_PATH_TO_WORDLIST: ''
 });

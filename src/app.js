@@ -11,7 +11,7 @@ const express = require('express');
 let cors = require('cors');
 const fs = require('fs');
 const _ = require('underscore');
-const { RUNNING_LOCAL, LOCAL_PORT, OSU_PORT, FILE_PATH_TO_WORDLIST } = require('./utilities/config.js');
+const { RUNNING_LOCAL, LOCAL_PORT, OSU_PORT, LOCAL_FILE_PATH_TO_WORDLIST, OSU_FILE_PATH_TO_WORDLIST } = require('./utilities/config.js');
 const { logIt } = require('./utilities/helperFunctions.js');
 
 // set-up Express --------------------------------------------------------------
@@ -58,7 +58,7 @@ function doesFileExist() {
   return new Promise((resolve, reject) => {
     //method to check if file is there without opening it adapted from https://flaviocopes.com/how-to-check-if-file-exists-node/
     //February 5, 2022
-    fs.access(FILE_PATH_TO_WORDLIST, fs.F_OK, (err) => {
+    fs.access(getPathToWordList(), fs.F_OK, (err) => {
       if (err) {
         resolve(false);
       } else {
@@ -78,7 +78,7 @@ function getWordList() {
   return new Promise((resolve, reject) => {
     //method to read file adapted from https://nodejs.dev/learn/reading-files-with-nodejs
     //February 5, 2022
-    fs.readFile(FILE_PATH_TO_WORDLIST, 'utf8' , (err, data) => {
+    fs.readFile(getPathToWordList(), 'utf8' , (err, data) => {
       if (err) {
         //console.error("getWordList() error: " + err)
         reject();
@@ -101,4 +101,12 @@ function convertListToArray(someList) {
   });
 
   return returnArray;
+}
+
+function getPathToWordList() {
+  if (RUNNING_LOCAL) {
+    return LOCAL_FILE_PATH_TO_WORDLIST;
+  } else {
+    return OSU_FILE_PATH_TO_WORDLIST
+  }
 }
