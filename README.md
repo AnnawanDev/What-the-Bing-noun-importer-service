@@ -8,5 +8,5 @@ This project imports a list of nouns from a teammate's service.  This then expos
 * Build and Run in Debug (nodemon): `npm run dev`
 
 ### Production
-* Build and Run with Forever: `npm run prod`
+* Build and Run with Forever: `npm run startProd`
 * Stop Forever Production Run: `npm run stopProd`

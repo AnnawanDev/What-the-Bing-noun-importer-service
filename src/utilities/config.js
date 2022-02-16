@@ -13,5 +13,5 @@ module.exports = Object.freeze({
     LOCAL_PORT: 5001,
     OSU_PORT: 13789,
     LOCAL_FILE_PATH_TO_WORDLIST: '/Users/edwied/development/OSU/What-the-Bing/CS361-FinalProject/NounListGenerator/wordlist.txt',
-    OSU_FILE_PATH_TO_WORDLIST: ''
+    OSU_FILE_PATH_TO_WORDLIST: '/nfs/stak/users/wiede/WhatTheBing/NounService/wordlist.txt'
 });
