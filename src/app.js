@@ -53,7 +53,7 @@ app.listen(port, () => {
 });
 
 
-// helper apis  ----------------------------------------------------------------
+// helper functions  ----------------------------------------------------------------
 function doesFileExist() {
   return new Promise((resolve, reject) => {
     //method to check if file is there without opening it adapted from https://flaviocopes.com/how-to-check-if-file-exists-node/
@@ -95,7 +95,6 @@ function convertListToArray(someList) {
   //February 5, 2022
   someList.split(/\r?\n/).forEach(line =>  {
     if (`${line}` != "") {
-      // console.log(`Line from file: ${line}`);
       returnArray.push(`${line}`);
     }
   });
