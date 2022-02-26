@@ -69,7 +69,7 @@ function doesFileExist() {
 }
 
 function backUpWordList() {
-  const wordsToGuess = ["basketball", "snow", "summer", "knight", "beach", "sword", "lake", "hawaii", "volcano", "mountain", "fish", "shark", "river", "horse", "cat", "penguin", "turtle", "laptop", "chess", "dog", "heart"];
+  const wordsToGuess = ["iphone", "iphone", "iphone", "iphone", "iphone"];
   let wordsInNewOrder = _.shuffle(wordsToGuess);
   return wordsInNewOrder;
 }
