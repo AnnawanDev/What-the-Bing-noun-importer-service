@@ -80,7 +80,6 @@ function getWordList() {
     //February 5, 2022
     fs.readFile(getPathToWordList(), 'utf8' , (err, data) => {
       if (err) {
-        //console.error("getWordList() error: " + err)
         reject();
       } else {
         resolve(convertListToArray(data));
